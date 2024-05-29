@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Rainbow</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff, #c1c8e4, #c1c8e4, #b5deff, #fbf0c1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .rainbow {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff, #c1c8e4, #c1c8e4, #b5deff, #fbf0c1);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffd1ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #c1c8e4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rainbow">Rainbow</div>
+        <button class="btn" onclick="showMessage()">Press Me</button>
+        <p id="message" style="display:none; margin-top: 20px; font-size: 1.5em; color: #ff9a9e;"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').textContent = 'Have a good day!';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
